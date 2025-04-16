@@ -239,7 +239,7 @@ extension SimRadioDTO.Series {
                 }
             }
             
-            let general: SimRadioDTO.FileGroup? = gtrvStation.general.map {
+            var general: SimRadioDTO.FileGroup? = gtrvStation.general.map {
                 .init(
                     tag: "general",
                     files: $0.map {
@@ -254,8 +254,10 @@ extension SimRadioDTO.Series {
                     }
                 )
             }
+            
+            if general?.files.isEmpty == true { general = nil }
 
-            let stationID: SimRadioDTO.FileGroup? = gtrvStation.sid.map {
+            var stationID: SimRadioDTO.FileGroup? = gtrvStation.sid.map {
                 .init(
                     tag: "id",
                     files: $0.map {
@@ -270,8 +272,10 @@ extension SimRadioDTO.Series {
                     }
                 )
             }
+            
+            if stationID?.files.isEmpty == true { stationID = nil }
 
-            let monoSolo: SimRadioDTO.FileGroup? = gtrvStation.mono_solo.map {
+            var monoSolo: SimRadioDTO.FileGroup? = gtrvStation.mono_solo.map {
                 .init(
                     tag: "mono_solo",
                     files: $0.map {
@@ -288,11 +292,13 @@ extension SimRadioDTO.Series {
                 )
             }
             
-            let eveningData = gtrvStation.time?["EVENING"] ?? nil
-            let morningData = gtrvStation.time?["MORNING"] ?? nil
+            if monoSolo?.files.isEmpty == true { monoSolo = nil }
+            
+            var eveningData = gtrvStation.time?["EVENING"] ?? nil
+            var morningData = gtrvStation.time?["MORNING"] ?? nil
 
             
-            let evening: SimRadioDTO.FileGroup? = eveningData.map {
+            var evening: SimRadioDTO.FileGroup? = eveningData.map {
                 .init(
                     tag: "time_evening",
                     files: $0.map {
@@ -308,7 +314,7 @@ extension SimRadioDTO.Series {
                 )
             }
 
-            let morning: SimRadioDTO.FileGroup? = morningData.map {
+            var morning: SimRadioDTO.FileGroup? = morningData.map {
                 .init(
                     tag: "time_morning",
                     files: $0.map {
@@ -323,11 +329,13 @@ extension SimRadioDTO.Series {
                     }
                 )
             }
+            if evening?.files.isEmpty == true { evening = nil }
+            if morning?.files.isEmpty == true { morning = nil }
             
             let toNewsData = gtrvStation.to?["NEWS"] ?? nil
             let toAdData = gtrvStation.to?["AD"] ?? nil
 
-            let toNews: SimRadioDTO.FileGroup? = toNewsData.map {
+            var toNews: SimRadioDTO.FileGroup? = toNewsData.map {
                 .init(
                     tag: "to_news",
                     files: $0.map {
@@ -343,7 +351,7 @@ extension SimRadioDTO.Series {
                 )
             }
 
-            let toAd: SimRadioDTO.FileGroup? = toAdData.map {
+            var toAd: SimRadioDTO.FileGroup? = toAdData.map {
                 .init(
                     tag: "to_adverts",
                     files: $0.map {
@@ -358,6 +366,9 @@ extension SimRadioDTO.Series {
                     }
                 )
             }
+            if toNews?.files.isEmpty == true { toNews = nil }
+            if toAd?.files.isEmpty == true { toAd = nil }
+
             
             // Собираем группы файлов для станции
             let stationFileGroups: [SimRadioDTO.FileGroup] = [

@@ -846,7 +846,7 @@ public let RadioStations: [RadioStation] = [
         sid: ["01","02","03","04","05","06","07","08","09","10","11","12","13"],
         mono_solo: ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25"],
         time: [
-            "EVENING": ["01","02","03","04","05","06","07"],
+            "EVENING": ["01","02","03","04","05","06"],
             "MORNING": ["01","02","03","04","05","06","07"]
         ],
         to: [
@@ -1680,14 +1680,6 @@ public let RadioStations: [RadioStation] = [
                     Intro(
                         file: "TAPE_LOOP_02",
                         delay: 8.0
-                    ),
-                    Intro(
-                        file: "TAPE_LOOP_03",
-                        delay: 8.0
-                    ),
-                    Intro(
-                        file: "TAPE_LOOP_04",
-                        delay: 8.0
                     )
                 ]
             ),
@@ -1758,14 +1750,6 @@ public let RadioStations: [RadioStation] = [
                         file: "THE_TIME_IS_NOW_02",
                         delay: 8.0
                     ),
-                    Intro(
-                        file: "THE_TIME_IS_NOW_03",
-                        delay: 8.0
-                    ),
-                    Intro(
-                        file: "THE_TIME_IS_NOW_04",
-                        delay: 8.0
-                    )
                 ]
             ),
             //WAIT
