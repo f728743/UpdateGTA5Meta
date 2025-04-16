@@ -3043,10 +3043,10 @@ public let RadioStations: [RadioStation] = [
                 set: nil,
                 intros: []
             ),
-            //MONO_DCHAKRA_ATTACK_PART_2
+            //MONO_CHAKRA_ATTACK_PART_2
             Song(
-                file: "MONO_DCHAKRA_ATTACK_PART_2",
-                root: "RADIO_05_TALK_01/mono_dchakra_attack_part_2/",
+                file: "MONO_CHAKRA_ATTACK_PART_2",
+                root: "RADIO_05_TALK_01/mono_chakra_attack_part_2/",
                 labels: [
                     Label(
                         artist: "CHAKRA ATTACK",
@@ -4413,7 +4413,7 @@ public let RadioStations: [RadioStation] = [
         mono_solo: ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"],
         time: [
             "EVENING": ["01","02","03","04","05","06","07"],
-            "MORNING": ["01","02","03","04","05","06","07"]
+            "MORNING": ["01","02","03","04","05","06","07","08"]
         ],
         to: [
             "AD": ["01","02","03","04","05","06","07"],
@@ -4472,8 +4472,22 @@ public let RadioStations: [RadioStation] = [
             ),
             //MONO_BEYOND_INSEMINATION
             Song(
-                file: "MONO_BEYOND_INSEMINATION",
-                root: "RADIO_11_TALK_02/mono_beyond_insemination/",
+                file: "MONO_BEYOND_INSEMINATION_PART_1",
+                root: "RADIO_11_TALK_02/mono_beyond_insemination_part_1/",
+                labels: [
+                    Label(
+                        artist: "Beyond Insemination",
+                        title: "",
+                        time: 0.0
+                    )
+                ],
+                set: nil,
+                intros: []
+            ),
+            //MONO_ZBEYOND_INSEMINATION_PART_2
+            Song(
+                file: "MONO_BEYOND_INSEMINATION_PART_2",
+                root: "RADIO_11_TALK_02/mono_beyond_insemination_part_2/",
                 labels: [
                     Label(
                         artist: "Beyond Insemination",
@@ -4491,20 +4505,6 @@ public let RadioStations: [RadioStation] = [
                 labels: [
                     Label(
                         artist: "BLESS YOUR HEART",
-                        title: "",
-                        time: 0.0
-                    )
-                ],
-                set: nil,
-                intros: []
-            ),
-            //MONO_ZBEYOND_INSEMINATION_PART_2
-            Song(
-                file: "MONO_ZBEYOND_INSEMINATION_PART_2",
-                root: "RADIO_11_TALK_02/mono_zbeyond_insemination_part_2/",
-                labels: [
-                    Label(
-                        artist: "Beyond Insemination",
                         title: "",
                         time: 0.0
                     )
@@ -7236,11 +7236,11 @@ public let RadioStations: [RadioStation] = [
                 set: nil,
                 intros: [
                     Intro(
-                        file: "HEARTBEAT_01",
+                        file: "HEART_BEAT_01",
                         delay: 8.0
                     ),
                     Intro(
-                        file: "HEARTBEAT_02",
+                        file: "HEART_BEAT_02",
                         delay: 8.0
                     )
                 ]
